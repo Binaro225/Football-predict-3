@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --pitch: #0a1410;
+  --pitch-line: #16261c;
+  --chalk: #f4f2ec;
+  --chalk-dim: #b9c2bb;
+  --amber: #e8a33d;
+  --amber-dim: #8a6526;
+  --home-blue: #5b8cff;
+  --away-red: #ff6b5b;
+}
+
+@theme inline {
+  --color-pitch: var(--pitch);
+  --color-pitch-line: var(--pitch-line);
+  --color-chalk: var(--chalk);
+  --color-chalk-dim: var(--chalk-dim);
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
+  --color-home-blue: var(--home-blue);
+  --color-away-red: var(--away-red);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-image:
+    radial-gradient(circle at 50% -10%, rgba(232, 163, 61, 0.08), transparent 45%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(244, 242, 236, 0.025) 0px,
+      rgba(244, 242, 236, 0.025) 1px,
+      transparent 1px,
+      transparent 64px
+    );
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--pitch);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+@keyframes scoreboard-flicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.85; }
+  96% { opacity: 1; }
+}
+
+.scoreboard-glow {
+  animation: scoreboard-flicker 6s ease-in-out infinite;
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}

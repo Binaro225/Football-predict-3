@@ -1,0 +1,85 @@
+{
+  "best_model": "LogisticRegression",
+  "models_compared": {
+    "RandomForest": {
+      "cv_accuracy_mean": 0.5885,
+      "cv_accuracy_std": 0.0072,
+      "test_accuracy": 0.58,
+      "test_f1_macro": 0.4227,
+      "log_loss": 0.9143,
+      "train_time_sec": 18.57
+    },
+    "ExtraTrees": {
+      "cv_accuracy_mean": 0.584,
+      "cv_accuracy_std": 0.0063,
+      "test_accuracy": 0.5767,
+      "test_f1_macro": 0.4166,
+      "log_loss": 0.9165,
+      "train_time_sec": 7.45
+    },
+    "GradientBoosting": {
+      "cv_accuracy_mean": 0.5829,
+      "cv_accuracy_std": 0.006,
+      "test_accuracy": 0.5708,
+      "test_f1_macro": 0.4338,
+      "log_loss": 0.9257,
+      "train_time_sec": 94.02
+    },
+    "LogisticRegression": {
+      "cv_accuracy_mean": 0.5894,
+      "cv_accuracy_std": 0.005,
+      "test_accuracy": 0.5775,
+      "test_f1_macro": 0.421,
+      "log_loss": 0.9089,
+      "train_time_sec": 0.19
+    },
+    "SVM": {
+      "cv_accuracy_mean": 0.575,
+      "cv_accuracy_std": 0.0065,
+      "test_accuracy": 0.5658,
+      "test_f1_macro": 0.443,
+      "log_loss": 0.951,
+      "train_time_sec": 36.23
+    },
+    "KNN": {
+      "cv_accuracy_mean": 0.5787,
+      "cv_accuracy_std": 0.0069,
+      "test_accuracy": 0.5567,
+      "test_f1_macro": 0.4372,
+      "log_loss": 1.0403,
+      "train_time_sec": 0.29
+    },
+    "NeuralNet": {
+      "cv_accuracy_mean": 0.4696,
+      "cv_accuracy_std": 0.0056,
+      "test_accuracy": 0.4642,
+      "test_f1_macro": 0.4257,
+      "log_loss": 4.9103,
+      "train_time_sec": 53.91
+    },
+    "XGBoost": {
+      "cv_accuracy_mean": 0.5723,
+      "cv_accuracy_std": 0.0075,
+      "test_accuracy": 0.565,
+      "test_f1_macro": 0.4474,
+      "log_loss": 0.9428,
+      "train_time_sec": 12.66
+    },
+    "LightGBM": {
+      "cv_accuracy_mean": 0.5721,
+      "cv_accuracy_std": 0.0127,
+      "test_accuracy": 0.5658,
+      "test_f1_macro": 0.4603,
+      "log_loss": 0.973,
+      "train_time_sec": 9.28
+    }
+  },
+  "auxiliary_models": {
+    "btts_model": "XGBClassifier",
+    "btts_test_accuracy": 0.5942,
+    "over_under_model": "XGBClassifier",
+    "over_under_test_accuracy": 0.5317
+  },
+  "feature_count": 31,
+  "training_samples": 6000
+}

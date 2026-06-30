@@ -1,0 +1,13 @@
+# Configuration de déploiement Render (https://render.com)
+# Render détecte ce fichier automatiquement lors de la création d'un nouveau service
+# à partir du dépôt GitHub. Service gratuit, idéal pour FastAPI + scikit-learn.
+services:
+  - type: web
+    name: football-predictor-api
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
